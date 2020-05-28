@@ -1,6 +1,6 @@
 {
   "name": "@tspring/context",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "@tspring/context",
   "main": "dist/index.js",
   "types": "src/index.ts",
