@@ -99,13 +99,13 @@ export class ClassPathScanningCandidateComponentProvider {
         const m = require(fileName)
         if (Class.isClass(m)) {
           clazzes.push(m)
-          NodeModuleResourceMap.set(m, new NodeModuleResource(require.cache[fileName]))
+          NodeModuleResourceMap.set(m, new NodeModuleResource(require.cache[fileName]!))
         } else {
           for (const k in m) {
             const cls = m[k]
             if (Class.isClass(cls)) {
               clazzes.push(cls)
-              NodeModuleResourceMap.set(cls, new NodeModuleResource(require.cache[fileName], k))
+              NodeModuleResourceMap.set(cls, new NodeModuleResource(require.cache[fileName]!, k))
             }
           }
         }
